@@ -20,7 +20,6 @@ function App() {
         </a>
       </header> */}
       <Header />
-      <h1>Hello World</h1>
     </div>
   );
 }
