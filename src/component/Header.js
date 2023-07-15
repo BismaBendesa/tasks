@@ -7,13 +7,11 @@ import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
-import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
-import AdbIcon from "@mui/icons-material/Adb";
 
-const pages = ["Products", "Pricing", "Blog"];
+const pages = ["Task#1"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 export default function Header() {
@@ -36,26 +34,45 @@ export default function Header() {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar
+      position="static"
+      sx={{
+        background: "#232730",
+        boxShadow: "10px 10px 20px #22252E",
+        borderBottom: "1px solid #2C2F37",
+      }}
+    >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
+          <Box
+            component="img"
+            src="../images/logo192.png"
+            alt="react-logo"
+            sx={{
+              height: 40,
+              width: 40,
+              maxHeight: { xs: 20, md: 40 },
+              maxWidth: { xs: 20, md: 40 },
+              mr: 1,
+              display: { xs: "none", md: "flex" },
+            }}
+          />
           <Typography
             variant="h6"
             noWrap
             component="a"
             href="/"
             sx={{
-              mr: 2,
+              mr: 4,
               display: { xs: "none", md: "flex" },
-              fontFamily: "monospace",
+              fontFamily: "Inter",
               fontWeight: 700,
-              letterSpacing: ".3rem",
+              letterSpacing: "0rem",
               color: "inherit",
               textDecoration: "none",
             }}
           >
-            LOGO
+            React
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -88,13 +105,31 @@ export default function Header() {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                <MenuItem
+                  key={page}
+                  onClick={handleCloseNavMenu}
+                  sx={{ fontFamily: "Inter" }}
+                >
+                  <Typography textAlign="center" sx={{ fontFamily: "Inter" }}>
+                    {page}
+                  </Typography>
                 </MenuItem>
               ))}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
+          <Box
+            component="img"
+            src="../images/logo192.png"
+            alt="react-logo"
+            sx={{
+              height: 40,
+              width: 40,
+              maxHeight: { xs: 30, md: 40 },
+              maxWidth: { xs: 30, md: 40 },
+              mr: 1,
+              display: { xs: "flex", md: "none" },
+            }}
+          />
           <Typography
             variant="h5"
             noWrap
@@ -104,31 +139,88 @@ export default function Header() {
               mr: 2,
               display: { xs: "flex", md: "none" },
               flexGrow: 1,
-              fontFamily: "monospace",
+              fontFamily: "Inter",
               fontWeight: 700,
               letterSpacing: ".3rem",
               color: "inherit",
               textDecoration: "none",
             }}
           >
-            LOGO
+            React
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block" }}
+                sx={{
+                  my: 2,
+                  color: "white",
+                  display: "block",
+                  fontFamily: "Inter",
+                }}
               >
                 {page}
               </Button>
             ))}
           </Box>
 
-          <Box sx={{ flexGrow: 0 }}>
+          <Box sx={{ flexGrow: 0, display: "flex" }}>
+            <Box
+              sx={{
+                mr: 2,
+              }}
+            >
+              <Typography
+                sx={{
+                  fontWeight: 500,
+                  fontSize: 18,
+                  fontFamily: "Inter",
+                }}
+              >
+                El Doggo
+              </Typography>
+              <Box
+                sx={{
+                  display: { xs: "none", md: "flex", alignItems: "center" },
+                }}
+              >
+                <Box
+                  component="img"
+                  src="../images/green-dot.png"
+                  sx={{
+                    width: 12,
+                    height: 12,
+                  }}
+                ></Box>
+                <Typography
+                  sx={{
+                    fontSize: "14px",
+                    ml: 0.5,
+                    fontFamily: "Inter",
+                    fontWeight: 200,
+                  }}
+                >
+                  Online
+                </Typography>
+              </Box>
+            </Box>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                <Box
+                  component="img"
+                  src="../images/selfie-doggo.jpg"
+                  sx={{
+                    width: 40,
+                    height: 40,
+                    maxWidth: { xs: 30, md: 40 },
+                    maxHeight: { xs: 30, md: 40 },
+                    background: "cover",
+                    objectFit: "cover",
+                    borderRadius: 100,
+                  }}
+                ></Box>
+                {/* <Avatar alt="Remy Sharp" src="../images/selfie-doggo.jpg" /> */}
               </IconButton>
             </Tooltip>
             <Menu
@@ -148,8 +240,14 @@ export default function Header() {
               onClose={handleCloseUserMenu}
             >
               {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
+                <MenuItem
+                  key={setting}
+                  onClick={handleCloseUserMenu}
+                  sx={{ fontFamily: "Inter" }}
+                >
+                  <Typography textAlign="center" sx={{ fontFamily: "Inter" }}>
+                    {setting}
+                  </Typography>
                 </MenuItem>
               ))}
             </Menu>

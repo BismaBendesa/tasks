@@ -1,6 +1,14 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
+  padding : 0;
   font-family: 'Inter Variable', sans-serif;
+  background: #23272F;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -8,4 +16,81 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* Main component styling */
+.main{
+  background-image: url(../public/images/circle-bg.png);
+  background-repeat: no-repeat;
+  background-position: 50% 110%;
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+  margin: auto;
+  position: relative;
+}
+
+.main h1{
+  color: #fff;
+  letter-spacing: -3.2px;
+  width: 740px;
+  display: block;
+  margin: auto;
+  font-size: 60px;
+  line-height: 113.523%; 
+  padding-top: 34px
+}
+.main p{
+  color: #FFF;
+  text-align: center;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 113.523%; /* 27.245px */
+  letter-spacing: -0.48px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+.main h1 span{
+  color: #149ECA;
+}
+
+.main hr{
+  opacity: 0;
+}
+
+.primary-button{
+  letter-spacing: -1.4px;
+  line-height: 113.523%;
+  background: #149ECA;
+  color: white;
+  padding : 20px 40px;
+  font-size: 28px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 4px 4px 20px #095168;
+  cursor: pointer;
+  margin: auto;
+  margin-bottom: 43px;
+}
+.primary-button:hover{
+  background: #1185ac;
+}
+.emoji{
+  background: #495464;
+  width: 70px;
+  height: 70px;
+  border-radius: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+
+.main img{
+  margin: auto;
+  width: 490px;
+  z-index: 99;
 }
