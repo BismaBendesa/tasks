@@ -3,10 +3,6 @@ import Button from "./Button";
 import Emoji from "./Emoji";
 // import { Hidden } from "@mui/material";
 
-function pertambahan(a, b) {
-  return a + b;
-}
-
 export default function Main() {
   return (
     <div className="main" style={{ overflow: "hidden" }}>
@@ -14,7 +10,7 @@ export default function Main() {
         Manage Your Productivity With <span>ProductiZen</span>
       </h1>
       <p>Don't let your dreams be dreams, Make your dreams come true!</p>
-      <Button />
+      <Button type="primary" text="Download Now" />
       <hr />
       <Emoji content="trophy-emoji" top="8%" left="10%" />
       <Emoji content="medal-emoji" top="25%" left="8%" />
@@ -24,7 +20,7 @@ export default function Main() {
       <Emoji content="dart-emoji" top="25%" right="8%" />
 
       {/* Iphone Mockup */}
-      <img src="../images/iphone-14-mockup.png" />
+      <img src="../images/iphone-14-mockup.png" alt="Iphone-mockup" />
     </div>
   );
 }

@@ -60,7 +60,7 @@ code {
   opacity: 0;
 }
 
-.primary-button{
+.primary{
   letter-spacing: -1.4px;
   line-height: 113.523%;
   background: #149ECA;
@@ -75,9 +75,27 @@ code {
   margin: auto;
   margin-bottom: 43px;
 }
-.primary-button:hover{
+.primary:hover{
   background: #1185ac;
 }
+
+.secondary{
+  letter-spacing: -1.2px;
+  line-height: 113.523%;
+  background: #23272F;
+  color: white;
+  padding : 15px 25px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 4px 4px 20px 0px #2B3036;
+  cursor: pointer;
+}
+.secondary:hover{
+  background: #171a1f;
+}
+
 .emoji{
   background: #495464;
   width: 70px;
@@ -93,4 +111,125 @@ code {
   margin: auto;
   width: 490px;
   z-index: 99;
+}
+
+/* playlist */
+.playlist{
+  background: #333A45;
+  padding-top: 90px;
+  padding-bottom:90px
+}
+.playlist-container{
+  margin: auto;
+}
+
+.playlist-header{
+  display :flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-bottom:60px
+
+}
+
+.playlist-header-text h1{
+  color: #FFF;
+  font-family: Inter;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 113.523%; /* 72.655px */
+  margin-bottom: 20px;
+}
+.playlist-header-text p{
+  color: rgba(255, 255, 255, 0.80);
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 113.523%; /* 27.245px */
+}
+.tracks-container{
+  display: grid; 
+  grid-template-columns: repeat(auto-fill, 243px);  
+  grid-column-gap: 65px;
+  grid-row-gap: 90px;
+  margin-top: 98px ;
+}
+.track {
+  cursor:pointer;
+}
+
+.track-image{
+  max-width: 280px;
+  max-height: 203px;
+  
+}
+.track-image img{
+  position: relative;
+  z-index: 9;
+  max-width: 203px;
+  max-height: 203px;
+}
+
+.track-image-bg{
+  position: relative;
+  top: -240px;
+  left: 40px;
+}
+.track-image-bg{
+  width: 203px;
+  height: 203px;
+}
+
+.track-details{
+  color: #fff;
+  margin-top: 17px;
+}
+
+.track-details .track-details-year{
+  color: #FFF;
+  text-align: center;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 113.523%; /* 18.164px */
+  margin-bottom: 7px;
+}
+
+.track-details h1{
+  color: #FFF;
+  font-family: Inter;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 113.523%; /* 31.786px */
+  margin-bottom: 14px;
+  margin-top: 7px;
+}
+
+.track-details .track-details-singer{
+  color: rgba(255, 255, 255, 0.60);
+  text-align: center;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 113.523%; /* 22.705px */
+}
+
+
+
+
+@media (min-width: 1536px){
+  .playlist-container{
+      max-width: 1536px;
+  }
+}
+
+@media (min-width: 600px){
+  .playlist-container{
+    padding-left: 24px;
+    padding-right: 24px;
+  }
 }

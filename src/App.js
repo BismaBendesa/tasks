@@ -1,7 +1,8 @@
 import React from "react";
 import "./App.css";
-import Header from "./component/Header";
-import Main from "./component/Main";
+import Header from "./components/Header";
+import Main from "./components/Main";
+import Playlist from "./components/Playlist";
 // import { createMuiTheme } from "@mui/core/styles";
 // import { MuiThemeProvider } from "@mui/styles";
 
@@ -21,6 +22,7 @@ function App() {
     <div className="App">
       <Header />
       <Main />
+      <Playlist />
     </div>
     // </MuiThemeProvider>
   );
