@@ -206,6 +206,7 @@ code {
   line-height: 113.523%; /* 31.786px */
   margin-bottom: 14px;
   margin-top: 7px;
+  text-transform: capitalize;
 }
 
 .track-details .track-details-singer{
