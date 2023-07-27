@@ -1,6 +1,35 @@
 import React from "react";
 import Button from "./Button";
 import Track from "./Track";
+import { artistsData } from "../API/SpotifyAPI";
+import { getToken } from "../API/SpotifyAPI";
+
+// console.log(await getToken());
+
+console.log(await artistsData());
+const artistDatas = await artistsData();
+
+const artistData = artistDatas.artists.map(
+  (data) => (
+    // const anotherTracks = {
+    //   trackImg: data.images[0],
+    //   trackSinger: data.name,
+    //   trackTitle: data.genres[0],
+    //   trackYear: "2023",
+    //   bgColor: "#D8DADE",
+    // };
+
+    <Track
+      trackImg={data.images[0].url}
+      trackSinger={data.name}
+      trackTitle={data.genres[0]}
+      trackYear="2023"
+      bgColor="#D8DADE"
+      href={data.href}
+    />
+  )
+  // console.log(data)
+);
 
 const tracks = [
   {
@@ -67,7 +96,10 @@ export default function Playlist() {
           </div>
         </div>
         {/* Grid for tracks */}
-        <div className="tracks-container">{trackData}</div>
+        <div className="tracks-container">
+          {trackData}
+          {artistData}
+        </div>
       </div>
     </div>
   );

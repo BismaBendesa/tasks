@@ -3,6 +3,8 @@ import "./App.css";
 import Header from "./components/Header";
 import Main from "./components/Main";
 import Playlist from "./components/Playlist";
+import SpotifyAPI from "./API/SpotifyAPI";
+// import { createBrowserRouter, RouterProvider } from "react-router-dom";
 // import { createMuiTheme } from "@mui/core/styles";
 // import { MuiThemeProvider } from "@mui/styles";
 
@@ -23,6 +25,7 @@ function App() {
       <Header />
       <Main />
       <Playlist />
+      {/* <SpotifyAPI /> */}
     </div>
     // </MuiThemeProvider>
   );
