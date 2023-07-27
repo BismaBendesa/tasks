@@ -4,7 +4,11 @@ export default function Track(props) {
   return (
     <div className="track">
       <div className="track-image">
-        <img src={`../images/${props.trackImg}.png`} alt={props.trackImg} />
+        {props.href ? (
+          <img src={props.trackImg} alt={props.trackImg} />
+        ) : (
+          <img src={`../images/${props.trackImg}.png`} alt={props.trackImg} />
+        )}
         <div
           className="track-image-bg"
           style={{ background: props.bgColor }}
