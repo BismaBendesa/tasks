@@ -4,7 +4,7 @@ import Track from "./Track";
 import { artistsData } from "../API/SpotifyAPI";
 import { getToken } from "../API/SpotifyAPI";
 
-// console.log(await getToken());
+console.log(await getToken());
 
 console.log(await artistsData());
 const artistDatas = await artistsData();
