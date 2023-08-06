@@ -3,7 +3,8 @@ import "./App.css";
 import Header from "./components/Header";
 import Main from "./components/Main";
 import Playlist from "./components/Playlist";
-import SpotifyAPI from "./API/SpotifyAPI";
+// import SpotifyAPI from "./API/SpotifyAPI";
+// import PageNotFound from "./pages/PageNotFound";
 // import { createBrowserRouter, RouterProvider } from "react-router-dom";
 // import { createMuiTheme } from "@mui/core/styles";
 // import { MuiThemeProvider } from "@mui/styles";
@@ -19,6 +20,11 @@ import SpotifyAPI from "./API/SpotifyAPI";
 // });
 
 function App() {
+  // const [page, setPage] = React.useState("login");
+
+  // const switchPage = (pageName) => {
+  //   setPage(pageName);
+  // };
   return (
     // <MuiThemeProvider theme={THEME}>
     <div className="App">
