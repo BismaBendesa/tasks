@@ -7,6 +7,20 @@ export default function Login(props) {
   const [inputPass, setInputPass] = React.useState("");
   const navigate = useNavigate();
   const [isLoggedIn, setIsLoggedIn] = React.useState(false);
+  const userCredentials = [
+    {
+      username: "bisma",
+      password: "123",
+    },
+    {
+      username: "diya",
+      password: "1234",
+    },
+    {
+      username: "rahmang",
+      password: "12345",
+    },
+  ];
 
   // Input onChange event
   const handleChange = (event) => {
